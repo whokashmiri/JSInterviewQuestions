@@ -140,3 +140,59 @@ function name() {
 
 
 
+// params VS Arguments
+
+function name(num) { //params
+    console.log(num*num);
+}
+name(3) //Arguments
+
+
+// REST AND SPREAD OPERATOR 
+function doSomething(...Rest){ //Rest
+    console.log("Do Something",Rest);
+}
+var block=[5,4]
+doSomething(...block) //spread
+console.log(...block); //spread
+
+//while using  ... it should the last operator
+
+
+//CallBack Function
+// a call back function is a function passed into another function as an argument 
+
+setTimeout(() => {
+    console.log("Bello");
+    
+}, 3000);
+
+// Arrow Functions
+const more = (z)=>{
+    return z*z
+}
+console.log(more(7));
+
+// Arrow functions are primarily used in JavaScript to write more concise and readable code by offering a cleaner syntax, particularly for short functions where you can implicitly return values
+// it is different from traditional function In SYNTAX
+// Implicit "Return" Keyword
+// in traditional function we can have argument without passing the parameters in arrow function it will give us an error of argument is not defined
+
+// this Keyword
+let user={
+    username:"Wello",
+    t1:()=>{
+        console.log(this.username);
+        
+    },
+    t2(){
+        console.log(this.username);
+        
+    },
+};
+user.t1();
+user.t2();
+
+
+
+
