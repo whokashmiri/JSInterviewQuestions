@@ -16,7 +16,7 @@ function abc(){
 }
 abc();
 // this is called Hoisting
-// JS first storedall the variable in the creation phase 
+// JS first store all the variable in the head during the creation phase 
 // it will be like this this i creation phase
 // var c;
 
@@ -31,25 +31,25 @@ abc();
 // MAP FILTER REDUCE
 // Map() is used to create a new array from existing one 
 
-const nums = [1,2,5,4]
-const mulThree = nums.map((num , index , newArr)=>{
-    return num*3
+const numbers = [1,2,5,4]
+const mulThree = numbers.map((number , index , newArr)=>{
+    return numbers*3
 })
 console.log(mulThree);
 // map takes three parameters ( current element  index and the array on which the map is being performed)
 
 // Filter() it returns those elements of an array which satisfy a given condition
-const numsFilter = [1,2,5,4]
-const moreThan  = numsFilter.filter((numsFilter , index , arr )=>{
-    return numsFilter>2;
+const numFilter = [1,2,5,4]
+const moreThan  = numFilter.filter((numFilter , index , arr )=>{
+    return numFilter>2;
 
 });
 console.log(moreThan);
 // filter takes three parameters ( current element  index and the array on which the map is being performed)
 
 // Reduce() it reduces the values of array to the one value
-const numsReduce = [1,2,5,4]
-const sums = numsReduce.reduce((acc , curr , i , arr)=>{
+const numReduce = [1,2,5,4]
+const sums = numReduce.reduce((acc , curr , i , arr)=>{
     return acc + curr
 },0)
 console.log(sums);
@@ -57,7 +57,7 @@ console.log(sums);
 // acc = accumulator it is result of the previous computation(if no initial val, first element of array = value of accumulator)
 // curr = current value [1,2,5,4]
 // i = index 
-// arr = array [numsReduce]
+// arr = array [numReduce]
 
 
 
@@ -70,16 +70,73 @@ const arr = [6,5,78,5,4]
 const mapResult =arr.map((arr)=>{
     return arr + 2
 })
-// this will return an Array with increament of 2
+// this will return an Array with increment of 2
 // because it return an array we can chain more functions
 const forEachResult = arr. forEach((arr)=>{
     return arr+2
 })
 console.log(mapResult , forEachResult);
 // this will not return anything
-// because it doesnt return anything  we cant chain more functions
+// because it doesn't return anything  we cant chain more functions
 
 
+
+// FUNCTIONS
+// function definition or function declaration or function statement
+let num = 3
+function double(num){
+    return num*num
+}
+console.log(double(num) );
+
+
+// Storing a function in a variable is called as functions a Expression
+const square = function double(num){
+    return num*num
+}
+console.log(square(4));
+
+
+// First Class Functions
+// Function can be treated as variable called a first call function
+// when a functions is passes to another functions those functions are called as
+// first class functions
+function add(num1, num2){
+    return num1+ num2
+
+}
+function displayAdd(fn){
+    console.log(fn(3,4));
+    
+}
+displayAdd(add);
+
+
+
+// IIFE (Immediately invoked function Expressions)
+
+(function multiply(num){
+    console.log(num*num);
+    
+})(3);
+
+// Question With IIFE 
+(function(x){
+    return(function(y){
+        console.log(x);
+        
+    })(2);
+})(1);
+// first i will check for x in the inner scope when it is not found there it will look for it in the parent scope: This happen because of closure(closure is the ability of a function to access the variables and functions that are lexically out of its scope)
+
+
+// Function Hoisting
+// using an variable declaring give is an error (because of hoisting)
+// but in Functions functions are hoisted Fully that means if you use a function before declaring it , it will still work fine (because the function are stored in heap full)
+name()
+function name() {
+    console.log("Hello");
+}
 
 
 
