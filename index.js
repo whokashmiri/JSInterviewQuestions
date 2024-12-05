@@ -182,7 +182,7 @@ console.log(more(7));
 let user={
     username:"Wello",
     t1:()=>{
-        console.log(this.username);
+        console.log("global" ,this.username);
         
     },
     t2(){
@@ -195,4 +195,16 @@ user.t2();
 
 
 
+//CLOSURE: ability gives to function from inner scope to outer scope
+//Lexical Scope: a variable declared outside a function can use b used inside a function 
+// Var is GLOBAL SCOPE LET HAVE BLOCK SCOPE
 
+function subscribe(){
+    let name = "Something"; 
+    function displaySome(){
+        console.log(name);
+    }
+    displaySome()
+}
+
+subscribe()
