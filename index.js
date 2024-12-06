@@ -257,9 +257,3 @@ function add(a) {
 }
 
 console.log(add(3)(4)(5)()); // Output: 12
-
-
-
-
-
-
