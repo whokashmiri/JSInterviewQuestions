@@ -28,6 +28,10 @@ console.log(undefined<0);
 console.log(undefined>=0);
 
 
+// the way by which data is stored in the Datatypes are divides into two categories 
+
+
+
 
 
 
