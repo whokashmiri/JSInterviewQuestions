@@ -349,5 +349,20 @@ console.log(city);  // Output: Los Angeles
 console.log(zip);   // Output: 90001
 
 
+// THIS KEYWORD
+console.log(this);
+function getParam() {
+    console.log(this);
+}
+let againUser = {
+    a :"aaqib",
+    age:"32",
+    getDetail(){
+        console.log(this.a);
+        
+    }
+}
+console.log(againUser);
+
 
 
