@@ -45,7 +45,7 @@ console.log(typeof(Array));
 
 
 // STACK AND HEAP MEMORY
-// primitives are stored in stack memory while as Reference types are stored in Heap
+// primitives are stored in stack memory while as Reference types or Non Primitives are stored in Heap
 
 let name = "aaqib"
 let myname = name
