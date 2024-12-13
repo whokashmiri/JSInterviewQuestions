@@ -2,12 +2,15 @@
 
 // synchronous coding the normal way
 
+function hello(){
+    setTimeout(() => {
+        console.log( "A: Asynchronous Code");
+        
+        
+    }, 1000);
+    
+}
 
-setTimeout(() => {
-    console.log("Asynchronous Code");
-    
-    
-}, 1000);
 // -executing code line by line is the synchronous code
 
 console.log("Synchronous Code");
@@ -20,7 +23,7 @@ const sub = new Promise((resolve , reject)=>{
         console.log("Promise");
         const result =true;
         if(result) resolve(" from True")
-        else reject( new Error ("From REject"))
+        else reject( new Error ("From Reject"))
         
     }, 2000);
 })
@@ -33,3 +36,35 @@ console.log(res);
 })
 console.log("Promises ended");
 
+
+//Promise Combinator
+// Promise.all Return All fulfilled Promises
+// Promise.race  returns the first encountered promises
+//promise.allsettled return all the promises whether fulfilled or rejected
+//promise.any  returns the first fulfilled promises
+
+// async await
+
+const result =async()=>{
+    const message1 = await hello()
+    console.log(message1);
+    
+}
+result()
+
+
+//We Can Use TRY and Catch also
+
+ 
+let x = 10;
+try {
+    if(x===10){
+        console.log("i am 10",x);
+        
+    }
+    
+} catch (error) {
+    console.log(error);
+    
+    
+}
