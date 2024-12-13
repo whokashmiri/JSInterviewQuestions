@@ -10,6 +10,7 @@ const user={
     isLoggedIn:false
 }
 console.log(user);
+//two ways to excess objects 1 with . another with []
 console.log(user.email);
 console.log(user["email"]);
 console.log(user.name);
