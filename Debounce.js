@@ -12,27 +12,65 @@ const btn  = document.querySelector(".inc")
 const btnPress  = document.querySelector(".incp")
 const count  = document.querySelector(".count")
 
+// ===================THROTTLING=POLYPHIL===============
+
 var pressCount = 0;
 var triggerCount =0;
 
-const myde = (cd , d)=>{
-    let timer;
-    return function(...args){
-        if(timer) clearTimeout(timer);
-        timer = setTimeout(()=>{
-            cb(...args);
-        },d)
-    }
+
+
+const myTh = (cb , d)=>{
+ let last =0;
+ return (...args)=>{
+    let now = new Date().getTime();
+    if(now -last <d )return;
+    last =now
+    return cb(...args)
+}
 }
 
-const deCount = myde(()=>{
+var thCount = myTh(()=>{
     count.innerHTML = ++triggerCount
 },800);
+
 btn.addEventListener("click",()=>{
     btnPress.innerHTML = ++pressCount;
-    deCount()
+    myTh()
     
 })
+
+
+
+
+
+
+//=====================DEBOUNCING=POLYPHIL==================
+// var pressCount = 0;
+// var triggerCount =0;
+
+// const myde = (cd , d)=>{
+//     let timer;
+//     return function(...args){
+//         if(timer) clearTimeout(timer);
+//         timer = setTimeout(()=>{
+//             cd(...args);
+//         },d)
+//     }
+// }
+
+// const deCount = myde(()=>{
+//     count.innerHTML = ++triggerCount
+// },800);
+// btn.addEventListener("click",()=>{
+//     btnPress.innerHTML = ++pressCount;
+//     deCount()
+    
+// })
+
+
+
+
+
 
 // const deCount = _.debounce(()=>{
 //     count.innerHTML = ++triggerCount
