@@ -25,7 +25,7 @@ const sub = new Promise((resolve , reject)=>{
         if(result) resolve(" from True")
         else reject( new Error ("From Reject"))
         
-    }, 2000);
+    }, 100);
 })
 .then((res)=>{
 console.log(res);
@@ -47,7 +47,7 @@ console.log("Promises ended");
 
 const result =async()=>{
     const message1 = await hello()
-    console.log(message1);
+    console.log("message1");
     
 }
 result()
@@ -56,15 +56,27 @@ result()
 //We Can Use TRY and Catch also
 
  
-let x = 10;
-try {
-    if(x===10){
-        console.log("i am 10",x);
+// let x = 10;
+// try {
+//     if(x===10){
+//         console.log("i am 10",x);
         
-    }
+//     }
     
-} catch (error) {
-    console.log(error);
+// } catch (error) {
+//     console.log(error);
     
     
-}
+// }
+
+
+console.log("START");
+ const pro = new Promise((resolve , reject)=>{
+    console.log(5622);
+
+ });pro.then((res)=>{
+    console.log("resrult: ", res);
+    
+ })
+ console.log("end");
+ 
