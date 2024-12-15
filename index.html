@@ -45,6 +45,14 @@ grid-gap: 10px;
             <span class="u">U</span>
         </div>
    
-        <script src="./Events.js"></script>
+        <script>
+document.querySelector(".products").addEventListener("click" ,(event)=>{
+    console.log(event);
+    
+    console.log(event.target);
+    
+})
+
+        </script>
     </body>
     </html>

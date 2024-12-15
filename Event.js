@@ -25,7 +25,7 @@
 // event delegation
 // Event delegation is a technique in JavaScript that allows you to handle events at a higher level in the DOM rather than attaching event listeners to individual elements
 
-document.querySelectorAll('.products').addEventListener("click", (event)=>{
+document.querySelector(".products").addEventListener("click" ,(event)=>{
     console.log(event.target);
     
 })
