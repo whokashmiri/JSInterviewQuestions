@@ -4,15 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(49, 47, 47);
+        }
+        .products{
+display: grid;
+grid-template-columns: 100px 100px 100px;
+grid-gap: 10px;
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+     </style>
+   
 </head>
+
 <body>
-    <button class="inc">Increment </button>
+    <!-- <button class="inc">Increment </button>
         <p>Button Pressed<span class="incp">0</span>Times</p>
-        <p>Button Pressed<span class="count">0</span>Times</p>
+        <p>Button Pressed<span class="count">0</span>Times</p> -->
 
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+        <div class="products">
+            <span  class="q">Q</span>
+            <span class="w">W</span>
+            <span class="e">E</span>
+            <span class="r">R</span>
+            <span class="t">T</span>
+            <span class="u">U</span>
+        </div>
    
-        <script src="./Debounce.js"></script>
+        <script src="./Events.js"></script>
     </body>
     </html>
