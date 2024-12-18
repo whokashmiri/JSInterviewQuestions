@@ -1,19 +1,17 @@
 
 console.log("==================Set=====================");
-const findDuplicates =()=>{
-    let seen = new Set()
-    let duplicates = new Set();
-     array.forEach((element) => {
+const findDuplicates=(array)=>{
+    const seen = new Set()
+    const duplicates= new Set()
+    array.forEach((element) => {
         if(seen.has(element)){
             duplicates.add(element)
         }else{
             seen.add(element)
-
         }
         
-     });
-     return [...duplicates]
-
+    });
+    return [...duplicates]
 }
 
 const  array = [1,2, 6,5,6,5,4,5]
