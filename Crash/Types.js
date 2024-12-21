@@ -38,5 +38,5 @@ let nearr = arr.reduce((acc, item)=>{
 
 
  //Difference between map and for each
-//  map retuns a new array while as forEach dont
+//  map returns a new array while as forEach don't
 //  chaining is allowed in map not in foreach
