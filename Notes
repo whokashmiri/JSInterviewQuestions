@@ -1,2 +1,16 @@
 -JS is Synchronous and single threaded
 
+Promises
+A Promise is an object representing the eventual completion or failure of an asynchronous operation. It allows you to write asynchronous code in a more manageable way.
+States of a Promise:
+Pending: Initial state, neither fulfilled nor rejected.
+Fulfilled: Operation completed successfully.
+Rejected: Operation failed.
+
+Fetch
+The fetch function is used to make network requests. It returns a Promise that resolves to the Response object representing the response to the request.
+
+Async/Await
+async and await are syntactic sugar built on top of Promises. They make asynchronous code look and behave more like synchronous code, making it easier to read and write.
+
+Promises, fetch, async/await, and then/catch are essential tools for handling asynchronous operations in JavaScript. They help you manage asynchronous code more effectively and make it easier to read and maintain.

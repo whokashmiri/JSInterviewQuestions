@@ -45,7 +45,7 @@ console.log("Promises ended");
 
 // async await
 
-const result =async()=>{
+const result = async()=>{
     const message1 = await hello()
     console.log("message1");
     
