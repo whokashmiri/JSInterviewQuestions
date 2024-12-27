@@ -14,3 +14,12 @@ Async/Await
 async and await are syntactic sugar built on top of Promises. They make asynchronous code look and behave more like synchronous code, making it easier to read and write.
 
 Promises, fetch, async/await, and then/catch are essential tools for handling asynchronous operations in JavaScript. They help you manage asynchronous code more effectively and make it easier to read and maintain.
+
+
+Implicit binding in JavaScript refers to how the this keyword is automatically set to the object that is calling a function.
+
+call: Invokes the function immediately with the specified this value and arguments provided individually.
+
+apply: Invokes the function immediately with the specified this value and arguments provided as an array.
+
+bind: Returns a new function with the specified this value and initial arguments, which can be called later.
