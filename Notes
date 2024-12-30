@@ -23,3 +23,32 @@ call: Invokes the function immediately with the specified this value and argumen
 apply: Invokes the function immediately with the specified this value and arguments provided as an array.
 
 bind: Returns a new function with the specified this value and initial arguments, which can be called later.
+
+
+Throttling
+Throttling ensures a function is called at most once in a specified period. It’s useful for events that can fire very frequently, like scrolling.
+
+Debouncing
+Debouncing ensures a function is called only after a specified period of inactivity. It’s useful for events like typing, where you want to wait until the user has stopped typing before making an API call
+
+function throttle(func, delay) {
+  let lastCall = 0;
+  return function(...args) {
+    const now = new Date().getTime();
+    if (now - lastCall < delay) {
+      return;
+    }
+    lastCall = now;
+    return func(...args);
+  };
+}
+
+function debounce(func, delay) {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+}
