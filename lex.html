@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="or">Orange</button>
+    <button id="gr">Green</button>
+    
+</body>
+<script>
+    // document.getElementById("or").onclick = function(){
+    //     document.body.style.backgroundColor= `orange`
+    // }
+
+    // document.getElementById("gr").onclick = function(){
+    //     document.body.style.backgroundColor= `green`
+    // }
+    function clickHandler (color){
+       return function(){
+        document.body.style.backgroundColor= `${color}`
+        }
+    }
+    document.getElementById("or").onclick = clickHandler('orange')
+    document.getElementById("gr").onclick = clickHandler('green')
+
+//Lexical Scope: This refers to the scope of a variable defined by its position within the source code. In JavaScript, a function's lexical scope is determined by where the function is written in the code. This means that inner functions have access to the variables and functions defined in their outer scope.
+
+//Closure: A closure is a feature in JavaScript where an inner function has access to its outer enclosing function's variables. This includes the outer function's scope chain. Closures are created every time a function is created, at function creation time
+
+
+</script>
+</html>

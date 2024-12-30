@@ -10,12 +10,12 @@ let str = "hello"
 let str1 = "world  "
 let str2 =''
 for (let index = 0; index < str.length; index++) {
-    for (let index = 0; index < str1.length; index++) {
-    console.log(str2.concat(str[index],str1[index]));
+    // for (let index = 0; index < str1.length; index++) {
+    // console.log(str2.concat(str[index],str1[index]));
     
-        // console.log ("from",str[index],str1[index]);
+        console.log ("from",str[index],str1[index]);
         
-    }
+    // }
  
    
     
