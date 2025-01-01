@@ -74,3 +74,26 @@ mul()// then after calling the function again the total will 20*2 =40
 
 
 
+const tinUser = new Object()
+tinUser.name="sammy"
+tinUser.age =32
+// console.log(tinUser);
+const regUser = {
+    email:"me@gmail.com",
+    fullname:{
+        userFullName:{
+            fname:"adsad",
+            Lname:"dsfzd"
+        }
+    }
+}
+// console.log(regUser);
+// console.log(regUser.email);
+// console.log(regUser.fullname.userFullName);
+//to combine two objects use Object.assign() or you can use spread operator (...)
+console.log(Object.assign({},regUser ,regUser.fullname));
+
+
+
+
+
