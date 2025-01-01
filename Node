@@ -1,0 +1,147 @@
+Node.js Interview Questions and Answers for Freshers
+1. What is Node.js, and why is it used?
+Answer:
+Node.js is a server-side runtime environment built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript code on the server side, enabling the development of scalable, high-performance, and event-driven applications. It's widely used for real-time applications like chat apps, APIs, and data streaming services.
+
+2. What is the difference between Node.js and traditional server-side scripting languages like PHP?
+Answer:
+
+Node.js is single-threaded and event-driven, making it efficient for handling multiple concurrent requests without blocking the execution.
+PHP follows a synchronous (blocking) request-handling model, requiring a new thread for each request, which can be less efficient under high load.
+3. What are the key features of Node.js?
+Answer:
+
+Asynchronous and Event-Driven: Handles multiple requests simultaneously without waiting for the previous task to complete.
+Single-Threaded: Uses a single thread for handling requests.
+Non-Blocking I/O: Operations are executed without blocking the main thread.
+Cross-Platform: Can be used on Windows, macOS, and Linux.
+Rich Ecosystem: Offers a vast library of packages via npm.
+4. What is npm? How do you install a package using npm?
+Answer:
+npm (Node Package Manager) is a tool for managing packages and libraries in Node.js. It helps install, update, and manage dependencies.
+To install a package:
+
+bash
+Copy code
+npm install <package-name>
+5. Explain the role of the event loop in Node.js.
+Answer:
+The event loop is the heart of Node.js's asynchronous processing. It continuously monitors and executes tasks in the event queue. Tasks like I/O operations, timers, or callbacks are handled asynchronously without blocking the main thread.
+
+6. What are modules in Node.js? How do you use them?
+Answer:
+Modules are reusable pieces of code in Node.js. They can be built-in (fs, http), third-party (via npm), or user-defined.
+Example of using a module:
+
+javascript
+Copy code
+const fs = require('fs');
+fs.writeFileSync('example.txt', 'Hello, Node.js!');
+7. What is the difference between require and import?
+Answer:
+
+require is used in CommonJS, the default module system in Node.js.
+import is used in ES Modules, which follow the ES6 standard.
+Node.js now supports ES Modules, but you need to use the .mjs extension or set "type": "module" in package.json.
+8. What is a callback function in Node.js? Why are callbacks important?
+Answer:
+A callback function is passed as an argument to another function and executed after a task is completed.
+Example:
+
+javascript
+Copy code
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+Callbacks are crucial for handling asynchronous tasks in Node.js.
+
+9. What are promises in Node.js, and how do they improve asynchronous programming?
+Answer:
+Promises represent the eventual result of an asynchronous operation. They provide .then and .catch methods, making code cleaner than using nested callbacks.
+Example:
+
+javascript
+Copy code
+const fs = require('fs').promises;
+fs.readFile('example.txt', 'utf8')
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+10. What is the purpose of package.json?
+Answer:
+package.json is a configuration file that holds information about a Node.js project, including:
+
+Project metadata (name, version)
+Dependencies and devDependencies
+Scripts for running tasks (e.g., npm start)
+11. How do you read and write files in Node.js?
+Answer:
+You can use the fs module to read and write files.
+Example of writing to a file:
+
+javascript
+Copy code
+const fs = require('fs');
+fs.writeFileSync('example.txt', 'Hello, world!');
+Example of reading a file:
+
+javascript
+Copy code
+const data = fs.readFileSync('example.txt', 'utf8');
+console.log(data);
+12. What is Express.js, and how is it related to Node.js?
+Answer:
+Express.js is a minimal and flexible Node.js framework for building web applications and APIs. It simplifies handling routes, middleware, and HTTP requests.
+
+Example:
+
+javascript
+Copy code
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => res.send('Hello, Express!'));
+app.listen(3000, () => console.log('Server running on port 3000'));
+13. How can you handle errors in Node.js?
+Answer:
+Common error-handling methods include:
+
+Using try-catch blocks:
+javascript
+Copy code
+try {
+  throw new Error('An error occurred');
+} catch (err) {
+  console.error(err.message);
+}
+Error-first callbacks:
+javascript
+Copy code
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) return console.error(err);
+  console.log(data);
+});
+Middleware for Express.js:
+javascript
+Copy code
+app.use((err, req, res, next) => {
+  res.status(500).send('Something broke!');
+});
+14. What is middleware in Node.js?
+Answer:
+Middleware is a function that processes incoming requests before they reach the route handler. In Express.js, middleware can be used for tasks like logging, authentication, and error handling.
+
+Example:
+
+javascript
+Copy code
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+15. How do you debug a Node.js application?
+Answer:
+
+Using console.log: Log variables and messages to the console.
+Using Node.js Debugger: Run node inspect app.js and use debugging commands.
+Using IDEs like VS Code: Use breakpoints and debugging tools in the IDE.
