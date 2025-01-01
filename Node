@@ -26,7 +26,7 @@ npm install <package-name>
 
 5. Explain the role of the event loop in Node.js.
 Answer:
-The event loop is the heart of Node.js's asynchronous processing. It continuously monitors and executes tasks in the event queue. Tasks like I/O operations, timers, or callbacks are handled asynchronously without blocking the main thread.
+The event loop(This is the process that checks if the call stack is empty.) is the heart of Node.js's asynchronous processing. It continuously monitors and executes tasks in the event queue. Tasks like I/O operations, timers, or callbacks are handled asynchronously without blocking the main thread.
 
 6. What are modules in Node.js? How do you use them?
 Answer:
@@ -103,7 +103,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 13. How can you handle errors in Node.js?
 Answer:
-Common error-handling methods include:]
+Common error-handling methods include:
 Using try-catch blocks:
 javascript
 Copy code
