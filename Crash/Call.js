@@ -20,3 +20,8 @@ return `hello ${this.name} he is in ${profession} age ${age}`;
 }
 let func= lop3.bind(ob3)
 console.log(func("It", 56))
+
+
+
+
+  
