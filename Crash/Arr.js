@@ -27,7 +27,7 @@ console.log("Merged",myArr.push(myAl));//this will log the length of the array o
 const from = "VANESSA"
 console.log(Array.from(from));
 let fro = ["A","A" ,"Q", "I", "B"]
-console.log(...fro);
+console.log("from",[...from]);
 let a= "a"
 let b = "b"
 let c ="c"
