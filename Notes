@@ -1,28 +1,9 @@
 -JS is Synchronous and single threaded
 
-Promises
-A Promise is an object representing the eventual completion or failure of an asynchronous operation. It allows you to write asynchronous code in a more manageable way.
-States of a Promise:
-Pending: Initial state, neither fulfilled nor rejected.
-Fulfilled: Operation completed successfully.
-Rejected: Operation failed.
 
-Fetch
-The fetch function is used to make network requests. It returns a Promise that resolves to the Response object representing the response to the request.
-
-Async/Await
-async and await are syntactic sugar built on top of Promises. They make asynchronous code look and behave more like synchronous code, making it easier to read and write.
-
-Promises, fetch, async/await, and then/catch are essential tools for handling asynchronous operations in JavaScript. They help you manage asynchronous code more effectively and make it easier to read and maintain.
 
 
 Implicit binding in JavaScript refers to how the this keyword is automatically set to the object that is calling a function.
-
-call: Invokes the function immediately with the specified this value and arguments provided individually.
-
-apply: Invokes the function immediately with the specified this value and arguments provided as an array.
-
-bind: Returns a new function with the specified this value and initial arguments, which can be called later.
 
 
 Throttling
@@ -52,3 +33,83 @@ function debounce(func, delay) {
     }, delay);
   };
 }
+
+
+Basic Concepts
+==var, let, const?
+var: Function-scoped, allows redeclaration and updates.
+let: Block-scoped, does not allow redeclaration but can be updated.
+const: Block-scoped, neither redeclarable nor updateable.
+
+==JavaScript data types?
+Primitive: String, Number, Boolean, Null, Undefined, Symbol, BigInt.
+Non-primitive: Objects, including Arrays and Functions.
+
+== vs ===?
+==: Compares values only and performs type coercion if necessary.
+===: Compares both values and types, ensuring strict equality.
+
+==What is a closure?
+A closure is a function that has access to variables from its outer function even after the outer function has finished executing.
+
+==What is this?
+this refers to the current execution context. It can refer to:
+The global object (window in browsers) in the global scope.
+The object that owns the method in object methods.
+The surrounding scope in arrow functions.
+
+Intermediate Concepts
+
+==call(), apply(), bind()?
+call: Invokes the function immediately with the specified this value and arguments provided individually.
+apply: Invokes the function immediately with the specified this value and arguments provided as an array.
+bind: Returns a new function with the specified this value and initial arguments, which can be called later.
+
+==Event loop?
+The event loop processes tasks from the callback and microtask queues after executing all synchronous code in the call stack.
+
+==undefined vs null?
+undefined: A variable is declared but not assigned a value.
+null: A variable is explicitly assigned to represent no value.
+
+==Promises?
+
+A Promise is an object representing the eventual completion or failure of an asynchronous operation. It allows you to write asynchronous code in a more manageable way.
+States of a Promise:
+Pending: Initial state, neither fulfilled nor rejected.
+Fulfilled: Operation completed successfully.
+Rejected: Operation failed.
+
+Fetch
+The fetch function is used to make network requests. It returns a Promise that resolves to the Response object representing the response to the request.
+
+Async/Await
+async and await are syntactic sugar built on top of Promises. They make asynchronous code look and behave more like synchronous code, making it easier to read and write.
+
+Promises, fetch, async/await, and then/catch are essential tools for handling asynchronous operations in JavaScript. They help you manage asynchronous code more effectively and make it easier to read and maintain.
+
+
+==Hoisting?
+Variables and function declarations are moved to the top of their scope during compilation. Only declarations are hoisted, not initializations.
+
+Advanced Concepts
+==Synchronous vs Asynchronous?
+Synchronous: Tasks are executed sequentially, one at a time.
+Asynchronous: Tasks can run independently, allowing the program to continue executing without waiting for a task to finish.
+
+==Arrow functions?
+Shorter syntax for writing functions. They don’t have their own this, don’t bind arguments, and can’t be used as constructors.
+
+==async and await?
+async: Declares a function as asynchronous, returning a promise.
+await: Pauses the async function until a promise resolves or rejects, allowing for synchronous-like code.
+
+==map(), forEach(), filter(), reduce()?
+map(): Creates a new array by transforming each element.
+The map() method is an ES5 feature that creates a new array by applying a function to each element of the original array.
+forEach(): Executes a function on each array element, no return value.
+filter(): Creates a new array with elements that pass a condition.
+The reduce method in JavaScript does not return a new array. Instead, it executes a reducer function on each element of the array, resulting in a single output value
+reduce(): Reduces an array to a single value by accumulating results.
+The filter() method creates a new array containing elements that satisfy a specified condition. This method skips empty elements and does not change the original array.
+
