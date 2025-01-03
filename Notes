@@ -55,13 +55,16 @@ The surrounding scope in arrow functions.
 
 Intermediate Concepts
 
+In JavaScript, call, bind, and apply are methods used to control the context (this value) in which a function is executed. 
+These methods are particularly useful when working with object-oriented programming in JavaScript, allowing you to ensure that functions execute in the correct context.
+
 ==call(), apply(), bind()?
 call: Invokes the function immediately with the specified this value and arguments provided individually.
 apply: Invokes the function immediately with the specified this value and arguments provided as an array.
 bind: Returns a new function with the specified this value and initial arguments, which can be called later.
 
 ==Event loop?
-The event loop processes tasks from the callback and microtask queues after executing all synchronous code in the call stack.
+The event loop processes tasks from the callback and micro task queues after executing all synchronous code in the call stack.
 
 ==undefined vs null?
 undefined: A variable is declared but not assigned a value.
@@ -102,11 +105,17 @@ await: Pauses the async function until a promise resolves or rejects, allowing f
 ==map(), forEach(), filter(), reduce()?
 map(): Creates a new array by transforming each element.
 The map() method is an ES5 feature that creates a new array by applying a function to each element of the original array.
+
 forEach(): Executes a function on each array element, no return value.
-filter(): Creates a new array with elements that pass a condition.
-The reduce method in JavaScript does not return a new array. Instead, it executes a reducer function on each element of the array, resulting in a single output value
+
 reduce(): Reduces an array to a single value by accumulating results.
+The reduce method in JavaScript does not return a new array. Instead, it executes a reducer function on each element of the array, resulting in a single output value
+
+filter(): Creates a new array with elements that pass a condition.
 The filter() method creates a new array containing elements that satisfy a specified condition. This method skips empty elements and does not change the original array.
+
+
+
 
 
 Shallow Copy

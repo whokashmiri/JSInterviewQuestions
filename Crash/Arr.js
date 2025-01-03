@@ -28,6 +28,7 @@ const from = "VANESSA"
 console.log(Array.from(from));
 let fro = ["A","A" ,"Q", "I", "B"]
 console.log("from",[...from]);
+console.log("from",...from);
 let a= "a"
 let b = "b"
 let c ="c"
