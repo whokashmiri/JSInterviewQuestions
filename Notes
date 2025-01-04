@@ -44,8 +44,12 @@ Non-primitive: Objects, including Arrays and Functions.
 ==: Compares values only and performs type coercion if necessary.
 ===: Compares both values and types, ensuring strict equality.
 
-==What is a closure?
-A closure is a function that has access to variables from its outer function even after the outer function has finished executing.
+==Lexical Scope: This refers to the scope of a variable defined by its position within the source code. In JavaScript, a function's lexical scope is determined by where the function is written in the code. This means that inner functions have access to the variables and functions defined in their outer scope.
+
+==Closure: A closure is a feature in JavaScript where an inner function has access to its outer enclosing function's variables. This includes the outer function's scope chain. Closures are created every time a function is created, at function creation time
+
+==Shadowing :
+Variable shadowing happens when a variable is declared in an inner scope using the same name as a variable in an outer scope. This leads to the inner scope’s variable taking precedence, effectively replacing and overshadowing the outer scope’s variable
 
 ==What is this?
 this refers to the current execution context. It can refer to:
@@ -146,3 +150,14 @@ The slice() method returns a shallow copy of a portion of an array into a new ar
 
 
 The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. It modifies the original array and returns an array containing the deleted elements.
+
+
+// An Immediately Invoked Function Expression (IIFE) is a function that runs as soon as it is defined.
+//Don't forget put ; in IFFE 
+
+// Benefits of Using IIFE
+// Avoid Global Scope Pollution: IIFEs help keep the global scope clean by encapsulating variables and functions within a local scope.
+
+// Private Variables and Functions: IIFEs allow you to create private variables and functions that cannot be accessed from outside the function
+
+// Avoid Hoisting Issues: Variables and functions declared within an IIFE are not hoisted to the global scope, reducing the risk of unexpected behavior.
