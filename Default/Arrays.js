@@ -29,15 +29,15 @@ const newArr = arr.join()
 console.log(newArr);
 console.log("++++++++++++++Splice and Slice+++++++++++++++++");
 
-console.log("ARR1",arr2);
-console.log(arr2.slice(1,3))
+// console.log("ARR1",arr2);
+// console.log(arr2.slice(1,3))
 // sLICE will return the elements from (1 TO (3-2) ) WILL NOT modify the original array
 
 
-console.log("arr2",arr2);
-console.log(arr2.splice(1,3))
+//console.log("arr2",arr2);
+//console.log(arr2.splice(1,3))
 // Splice will return the elements from (1 TO (3) ) modify the original array
-console.log(arr2);
+//console.log(arr2);
 console.log("====================Arrays 2=========================");
 
 
@@ -46,12 +46,25 @@ const here = ["6" , "8" ,"Y6"]
 heres.push(here);
 //Pushes on existing array
 // console.log(heres);
-console.log(heres.concat(here));
-console.log(...here);
+// console.log(heres.concat(here));
+// console.log(...here);
 const inArr =[1,[2,2,[6,5,[6,0],4],3]]
-console.log(inArr.flat(Infinity));
-console.log(Array.from({name:"ajhsd" , age:34}));
+// console.log(inArr.flat(Infinity));
+// console.log(Array.from({name:"ajhsd" , age:34}));
 
+
+console.log("++++++++Again Arrays++++++++");
+
+const ar =[1,2,3,4, true]
+console.log(ar);
+const strArr = ["A " , "B" , "C"]
+console.log(strArr);
+
+const newStrArr = new Array("ROPE" , "NEW" , "POK")
+console.log(newStrArr);
+
+
+console.log(newStrArr.concat(strArr).concat(ar));
 
 
 
