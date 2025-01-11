@@ -66,6 +66,24 @@ console.log(newStrArr);
 
 console.log(newStrArr.concat(strArr).concat(ar));
 
+console.log("===Arrays Continue====");
+
+const hero= ["AS" , "AW" ,"GH" ,"PO"]
+const heros= ["ASe" , "AeW" ,"GHe" ,"PdO"]
+hero.filter((item)=>{
+    if (item == "AS") {
+        console.log("Available",item);
+
+    }
+    
+})
+// hero.push(heros);
+console.log(hero);
+console.log("Heros", hero.concat(heros));
+console.log([...hero ,...heros]);
+console.log(...hero ,...heros);
+
+
 
 
 
