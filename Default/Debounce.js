@@ -7,6 +7,7 @@
 // Throttling in JavaScript is a technique used to limit the rate at which a function is executed. This is particularly useful for events that fire frequently, such as scrolling, resizing, or mouse movements, where you might want to avoid overwhelming the browser with too many function calls.
 // Purpose:
 //  Limits the frequency of execution of a function to a certain interval.
+//Debouncing is a technique that’s used to keep an event handler from “bouncing” (executing) before a certain amount of time has passed regardless of how many times an event is triggered. In other words, a function (event handler) is “delayed” until the event (like a “click” or “scroll”) stops firing for a certain amount of time. 
 
 const btn  = document.querySelector(".inc")
 const btnPress  = document.querySelector(".incp")
